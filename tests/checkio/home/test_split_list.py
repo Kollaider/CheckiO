@@ -16,3 +16,9 @@ class SplitListTestCase(TestCase):
         actual_result = split_list(input_data)
         expected_result = [[1, 2, 3], [4, 5]]
         self.assertEqual(expected_result, actual_result)
+
+    def test__zero_list__valid_result(self):
+        input_data = []
+        actual_result = split_list(input_data)
+        expected_result = [[], []]
+        self.assertEqual(expected_result, actual_result)
