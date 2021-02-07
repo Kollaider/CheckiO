@@ -3,7 +3,7 @@ from unittest import TestCase
 from checkio.home.popular_words import popular_words
 
 
-class SplitListTestCase(TestCase):
+class PopularWordsTestCase(TestCase):
 
     def test__popular_words__equal_result(self):
         self.assertEqual({'i': 4,
