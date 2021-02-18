@@ -17,8 +17,7 @@ def first_word(text: str) -> str:
 
 
 def main():
-    print('Example:')
-    print(first_word('Hello world'))
+    print(f"first_word('Hello world') == {first_word('Hello world')}")
 
 
 if __name__ == '__main__':
