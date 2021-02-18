@@ -26,8 +26,9 @@ def correct_sentence(text: str) -> str:
 
 
 def main():
-    print(f"correct_sentence('greetings, friends') == "
-          f"{correct_sentence('greetings, friends')}")
+    print(
+        f"correct_sentence('greetings, friends') == "
+        f"{correct_sentence('greetings, friends')}")
 
 
 if __name__ == '__main__':
