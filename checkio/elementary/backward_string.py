@@ -12,12 +12,10 @@ INPUT/OUTPUT EXAMPLE:
 
 
 def backward_string(val: str) -> str:
-
     return val[::-1]
 
 
 def main():
-    print('Example:')
     print(f"backward_string('val') == {backward_string('val')}")
 
 
