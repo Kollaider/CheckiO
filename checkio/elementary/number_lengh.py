@@ -4,9 +4,8 @@ URL: https://py.checkio.org/mission/number-length/solve/
 DESCRIPTION:
     You have a positive integer. Try to find out how many digits it has?
 INPUT/OUTPUT EXAMPLE:
-    first_word("Hello world") == "Hello"
-    first_word("a word") == "a"
-    first_word("hi") == "hi"
+    number_length(10) == 2
+    number_length(0) == 1
 """
 
 
@@ -15,8 +14,7 @@ def number_length(a: int) -> int:
 
 
 def main():
-    print('Example:')
-    print(number_length(10))
+    print(f'number_length(10) == {number_length(10)}')
 
 
 if __name__ == '__main__':
