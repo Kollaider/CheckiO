@@ -11,21 +11,15 @@ INPUT/OUTPUT EXAMPLE:
     beginning_zeros('100100') == 0
     beginning_zeros('001001') == 2
 """
+from itertools import takewhile
 
 
 def beginning_zeros(number: str) -> int:
-    num = 0
-    for i in number:
-        if i == '0':
-            num += 1
-        else:
-            break
-    return num
+    return len(list(takewhile(lambda num: num == '0', number)))
 
 
 def main():
-    print('Example:')
-    print(beginning_zeros('100'))
+    print(f"beginning_zeros('0100') == {beginning_zeros('0100')}")
 
 
 if __name__ == '__main__':
