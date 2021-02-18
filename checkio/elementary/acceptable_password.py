@@ -17,8 +17,9 @@ def is_acceptable_password(password: str) -> bool:
 
 
 def main():
-    print('Example:')
-    print(is_acceptable_password('short'))
+    print(
+        f"is_acceptable_password('short') == "
+        f"{is_acceptable_password('short')}")
 
 
 if __name__ == '__main__':
