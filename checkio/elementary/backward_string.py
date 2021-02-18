@@ -12,13 +12,13 @@ INPUT/OUTPUT EXAMPLE:
 
 
 def backward_string(val: str) -> str:
-    # your code here
+
     return val[::-1]
 
 
 def main():
     print('Example:')
-    print(backward_string('val'))
+    print(f"backward_string('val') == {backward_string('val')}")
 
 
 if __name__ == '__main__':
