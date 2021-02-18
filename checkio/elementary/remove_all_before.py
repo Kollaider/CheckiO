@@ -32,8 +32,9 @@ def remove_all_before(items: list, border: int) -> Iterable:
 
 
 def main():
-    print('Example:')
-    print(list(remove_all_before([1, 2, 3, 4, 5], 3)))
+    print(
+        f'remove_all_before([1, 2, 3, 4, 5], 3) == '
+        f'{remove_all_before([1, 2, 3, 4, 5], 3)}')
 
 
 if __name__ == '__main__':
