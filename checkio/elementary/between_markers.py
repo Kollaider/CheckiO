@@ -19,12 +19,13 @@ INPUT/OUTPUT EXAMPLE:
 
 
 def between_markers(text: str, begin: str, end: str) -> str:
-    return text[text.find(begin) + 1: text.rfind(end)]
+    return text[text.find(begin) + 1 : text.rfind(end)]
 
 
 def main():
-    print('Example:')
-    print(between_markers('What is >apple<', '>', '<'))
+    print(
+        f"between_markers('What is >apple<', '>', '<') == "
+        f"{between_markers('What is >apple<', '>', '<')}")
 
 
 if __name__ == '__main__':
