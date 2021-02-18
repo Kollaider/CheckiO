@@ -20,8 +20,7 @@ def replace_first(items: list) -> Iterable:
 
 
 def main():
-    print('Example:')
-    print(replace_first([1, 2, 3, 4]))
+    print(f'replace_first([1, 2, 3, 4]) == {replace_first([1, 2, 3, 4])}')
 
 
 if __name__ == '__main__':
