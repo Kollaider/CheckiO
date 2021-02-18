@@ -9,21 +9,14 @@ INPUT/OUTPUT EXAMPLE:
     end_zeros(10) == 1
     end_zeros(101) == 0
 """
+from itertools import takewhile
 
 
-def end_zeros(num: int) -> int:
-    num = str(num)
-    n = 0
-    for i in num[::-1]:
-        if i == '0':
-            n += 1
-        else:
-            break
-    return n
+def end_zeros(number: int) -> int:
+    return len(list(takewhile(lambda num: num == '0', str(number)[::-1])))
 
 
 def main():
-    print('Example:')
     print(end_zeros(0))
 
 
