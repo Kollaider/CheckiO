@@ -17,15 +17,17 @@ INPUT/OUTPUT EXAMPLE:
 
 
 def correct_sentence(text: str) -> str:
-    text = text[0].upper() + text[1:] + '.' \
-        if not text.endswith('.') else text[0].upper() + text[1:]
+    if not text.endswith('.'):
+        text = text[0].upper() + text[1:] + '.'
+    else:
+        text[0].upper() + text[1:]
 
     return text
 
 
 def main():
-    print('Example:')
-    print(correct_sentence('greetings, friends'))
+    print(f"correct_sentence('greetings, friends') == "
+          f"{correct_sentence('greetings, friends')}")
 
 
 if __name__ == '__main__':
