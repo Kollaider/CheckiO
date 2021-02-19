@@ -9,16 +9,17 @@ INPUT/OUTPUT EXAMPLE:
     list(replace_first([1])) == [1]
     list(replace_first([])) == []
 """
-from typing import Iterable
 
 
-def replace_first(items: list) -> Iterable:
-    # first solusion
-    # if items:
-    #     items.append(items.pop(0))
-    # return items
+# First solusion
+def replace_first(items: list) -> list:
+    if items:
+        items.append(items.pop(0))
+    return items
 
-    # second solution
+
+# Second solution
+def replace_first(items: list) -> list:
     return items[1:] + items[:1]
 
 
