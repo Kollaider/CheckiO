@@ -10,7 +10,6 @@ DESCRIPTION:
     (2) if the list is empty, then it should remain empty.
 INPUT/OUTPUT EXAMPLE:
     list(remove_all_before([1, 2, 3, 4, 5], 3)) == [3, 4, 5]
-
     list(remove_all_before([1, 1, 2, 2, 3, 3], 2)) == [2, 2, 3, 3]
     list(remove_all_before([1, 1, 2, 4, 2, 3, 4], 2)) == [2, 4, 2, 3, 4]
     list(remove_all_before([1, 1, 5, 6, 7], 2)) == [1, 1, 5, 6, 7]
@@ -18,17 +17,11 @@ INPUT/OUTPUT EXAMPLE:
     list(remove_all_before([7, 7, 7, 7, 7, 7, 7, 7, 7], 7))
      == [7, 7, 7, 7, 7, 7, 7, 7, 7]
 """
+from itertools import dropwhile
 
 
-from typing import Iterable
-
-
-def remove_all_before(items: list, border: int) -> Iterable:
-    try:
-        ind = items.index(border)
-        return items[ind:]
-    except ValueError:
-        return items
+def remove_all_before(items: list, border: int) -> list:
+    return list(dropwhile(lambda num: border != num, items))
 
 
 def main():
