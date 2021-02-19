@@ -15,21 +15,11 @@ INPUT/OUTPUT EXAMPLE:
 
 
 def split_pairs(a):
-    lst = []
-    if len(a) == 0:
-        return lst
-    for i in range(len(a)):
-        if i % 2 != 0 and i != 0:
-            lst.append(a[i - 1] + a[i])
-    else:
-        if len(a) % 2 != 0:
-            lst.append(a[i] + '_')
-    return lst
+    return [ch1 + ch2 for ch1, ch2 in zip(a[::2], a[1::2] + '_')]
 
 
 def main():
-    print('Example:')
-    print(list(split_pairs('abcd')))
+    print(f"list(split_pairs('abcd')) == {list(split_pairs('abcd'))}")
 
 
 if __name__ == '__main__':
