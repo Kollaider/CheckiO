@@ -20,9 +20,7 @@ def backward_string_by_word(text: str) -> str:
         if words[i].isalpha():
             words[i] = words[i][::-1]
 
-    words = ''.join(words).replace('*', ' ')
-
-    return words
+    return ''.join(words).replace('*', ' ')
 
 
 def main():
