@@ -19,7 +19,7 @@ INPUT/OUTPUT EXAMPLE:
 
 
 def between_markers(text: str, begin: str, end: str) -> str:
-    return text[text.find(begin) + 1 : text.rfind(end)]
+    return text[text.find(begin) + 1:text.rfind(end)]
 
 
 def main():

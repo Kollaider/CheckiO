@@ -19,7 +19,7 @@ def replace_first(items: list) -> list:
 
 
 # Second solution
-def replace_first(items: list) -> list:
+def replace_first(items: list) -> list:  # noqa: F811
     return items[1:] + items[:1]
 
 
