@@ -36,8 +36,8 @@ def words_order(text: str, words: list) -> bool:
 
 
 def main():
-    print('Example:')
-    print(words_order('hi world im here', ['world', 'im', 'here']))
+    print(f"words_order('hi world im here', ['world', 'im', 'here'])) == "
+          f"{words_order('hi world im here', ['world', 'im', 'here'])}")
 
 
 if __name__ == '__main__':
