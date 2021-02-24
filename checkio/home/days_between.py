@@ -17,8 +17,7 @@ INPUT/OUTPUT EXAMPLE:
 import datetime
 
 
-def days_diff(a, b):
-    # your code here
+def days_diff(a: tuple, b: tuple) -> int:
     date1 = datetime.date(a[0], a[1], a[2])
     date2 = datetime.date(b[0], b[1], b[2])
     date = date2 - date1
@@ -26,8 +25,8 @@ def days_diff(a, b):
 
 
 def main():
-    print('Example:')
-    print(days_diff((1982, 4, 19), (1982, 4, 22)))
+    print(f'days_diff((1982, 4, 19), (1982, 4, 22)) == '
+          f'{days_diff((1982, 4, 19), (1982, 4, 22))}')
 
 
 if __name__ == '__main__':
