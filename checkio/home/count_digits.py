@@ -24,8 +24,7 @@ def count_digits(text: str) -> int:
 
 
 def main():
-    print('Example:')
-    print(count_digits('hi'))
+    print(f"count_digits('hi') == {count_digits('hi')}")
 
 
 if __name__ == '__main__':
