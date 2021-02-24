@@ -21,16 +21,14 @@ INPUT/OUTPUT EXAMPLE:
 
 
 def between_markers(text: str, begin: str, end: str) -> str:
-    b, e = text.find(begin), text.find(end)
 
+    b, e = text.find(begin), text.find(end)
     if b == -1 and e == -1:
         return text
-
     if b == -1:
         return text[:e]
     if e == -1:
         return text[b + len(begin):]
-
     if b >= 0 and e >= 0:
         return text[b + len(begin):e]
     return ''
