@@ -14,12 +14,12 @@ INPUT/OUTPUT EXAMPLE:
 """
 
 
-def split_pairs(a):
-    return [ch1 + ch2 for ch1, ch2 in zip(a[::2], a[1::2] + '_')]
+def split_pairs(text: str) -> list:
+    return [ch1 + ch2 for ch1, ch2 in zip(text[::2], text[1::2] + '_')]
 
 
 def main():
-    print(f"list(split_pairs('abcd')) == {list(split_pairs('abcd'))}")
+    print(f"split_pairs('abcd') == {split_pairs('abcd')}")
 
 
 if __name__ == '__main__':
