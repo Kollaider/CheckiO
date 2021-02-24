@@ -21,8 +21,7 @@ def checkio(array: list) -> int:
 
 
 def main():
-    print('Example:')
-    print(checkio([0, 1, 2, 3, 4, 5]))
+    print(f'checkio([0, 1, 2, 3, 4, 5]) == {checkio([0, 1, 2, 3, 4, 5])}')
 
 
 if __name__ == '__main__':
