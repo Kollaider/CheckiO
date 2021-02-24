@@ -15,6 +15,13 @@ class SplitListTestCase(TestCase):
         actual_result = bigger_price(*input_data)
         expected_result = [
             {'name': 'wine', 'price': 138},
-            {'name': 'bread', 'price': 100},
-        ]
+            {'name': 'bread', 'price': 100}]
         self.assertEqual(expected_result, actual_result)
+
+        input_data_2 = (1, [
+            {'name': 'pen', 'price': 5},
+            {'name': 'whiteboard', 'price': 170},
+        ])
+        actual_result_2 = bigger_price(*input_data_2)
+        expected_result_2 = [{'name': 'whiteboard', 'price': 170}]
+        self.assertEqual(expected_result_2, actual_result_2)
