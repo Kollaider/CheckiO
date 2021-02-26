@@ -23,14 +23,16 @@ INPUT/OUTPUT EXAMPLE:
 def left_join(phrases: tuple) -> str:
     lst = []
     for phrase in phrases:
-        lst.append(phrase.replace('right', 'left')) \
-            if 'right' in phrase else (lst.append(phrase))
+        if 'right' in phrase:
+            lst.append(phrase.replace('right', 'left'))
+        else:
+            lst.append(phrase)
     return ','.join(lst)
 
 
 def main():
-    print('Example:')
-    print(left_join(('left', 'right', 'left', 'stop')))
+    print(f"left_join(('left', 'right', 'left', 'stop')) == "
+          f"{left_join(('left', 'right', 'left', 'stop'))}")
 
 
 if __name__ == '__main__':
