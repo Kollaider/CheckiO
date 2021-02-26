@@ -20,21 +20,15 @@ INPUT/OUTPUT EXAMPLE:
 def checkio(words: str) -> bool:
     words = words.split()
     count = 0
-
     for word in words:
-
         if word.isalpha():
             count += 1
         else:
             count = 0
-        if count > 2:
-            return True
-    else:
-        return False
+    return count > 2
 
 
 def main():
-    print('Example:')
     print(checkio('Hello World hello'))
 
 
