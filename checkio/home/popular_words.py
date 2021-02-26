@@ -16,26 +16,24 @@ DESCRIPTION:
     If the word wasn’t found even once, it has to be returned
     in the dictionary with 0 (zero) value.
 INPUT/OUTPUT EXAMPLE:
-        popular_words('''When I was One I had just begun
-                        When I was Two I was nearly new''',
-                        ['i', 'was', 'three', 'near']) == {
-                        'i': 4, 'was': 3,'three': 0, 'near': 0
-                        }`
+        popular_words(
+        '''When I was One I had just begun
+        When I was Two I was nearly new''',
+        ['i', 'was', 'three', 'near']) == {
+        'i': 4, 'was': 3,'three': 0, 'near': 0
+        }`
 """
 
 
 def popular_words(text: str, words: list) -> dict:
-    dct = {}
     text = text.lower().split()
-    for i in words:
-        dct[i] = text.count(i)
-    return dct
+    return {i: text.count(i) for i in words}
 
 
 def main():
-    print('Example:')
-    print(popular_words('When I was One I had just begun When I was Two I was nearly new',
-                        ['i', 'was', 'three', 'near']))
+    print(popular_words(
+        'When I was One I had just begun When I was Two I was nearly new',
+        ['i', 'was', 'three', 'near']))
 
 
 if __name__ == '__main__':
