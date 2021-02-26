@@ -13,18 +13,12 @@ INPUT/OUTPUT EXAMPLE:
 
 
 def sum_numbers(text: str) -> int:
-
     text = text.split()
-    summing = 0
-    for i in text:
-        if i.isdigit():
-            summing += int(i)
-    return summing
+    return sum(int(num) for num in text if num.isdigit())
 
 
 def main():
-    print('Example:')
-    print(sum_numbers('hi'))
+    print(f"sum_numbers('hi') == {sum_numbers('hi')}")
 
 
 if __name__ == '__main__':
