@@ -25,19 +25,18 @@ INPUT/OUTPUT EXAMPLE:
 
 
 def nearest_value(values: set, one: int) -> int:
-    values = sorted(values)
     ans = one
     mn = max(values)
-    for i in values:
-        if (i - one) < mn:
-            ans = i
-        mn = abs(i - one)
+    for number in sorted(values):
+        if (number - one) < mn:
+            ans = number
+        mn = abs(number - one)
     return ans
 
 
 def main():
     print(
-        f'nearest_value({4, 7, 10, 11, 12, 17}, 9)) == '
+        'nearest_value({4, 7, 10, 11, 12, 17}, 9)) == '
         f'{nearest_value({4, 7, 10, 11, 12, 17}, 9)}',
     )
 
