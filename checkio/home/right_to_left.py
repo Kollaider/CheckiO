@@ -22,7 +22,7 @@ import re
 from typing import Tuple
 
 
-def left_join(phrases: Tuple[str]) -> str:
+def left_join(phrases: Tuple[str, ...]) -> str:
     return re.sub('right', 'left', ','.join(phrases))
 
 
