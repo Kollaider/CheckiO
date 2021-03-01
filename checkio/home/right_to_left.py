@@ -18,16 +18,12 @@ INPUT/OUTPUT EXAMPLE:
     left_join(("enough", "jokes")) ==
                 "enough,jokes", "Nothing to replace"
 """
+import re
+from typing import Tuple
 
 
-def left_join(phrases: tuple) -> str:
-    lst = []
-    for phrase in phrases:
-        if 'right' in phrase:
-            lst.append(phrase.replace('right', 'left'))
-        else:
-            lst.append(phrase)
-    return ','.join(lst)
+def left_join(phrases: Tuple[str]) -> str:
+    return re.sub('right', 'left', ','.join(phrases))
 
 
 def main():
