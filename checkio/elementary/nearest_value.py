@@ -22,9 +22,10 @@ INPUT/OUTPUT EXAMPLE:
     nearest_value({4, 7, 10, 11, 12, 17}, 9) == 10
     nearest_value({4, 7, 10, 11, 12, 17}, 8) == 7
 """
+from typing import Set
 
 
-def nearest_value(values: set, one: int) -> int:
+def nearest_value(values: Set[int], one: int) -> int:
     ans = one
     mn = max(values)
     for number in sorted(values):
