@@ -16,7 +16,6 @@ INPUT/OUTPUT EXAMPLE:
 
 
 def count_digits(text: str) -> int:
-    # return len(list(filter(lambda ch: ch.isdigit(), text)))
     return len(list(filter(str.isdigit, text)))
 
 
