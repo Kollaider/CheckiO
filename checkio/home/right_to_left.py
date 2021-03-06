@@ -19,10 +19,10 @@ INPUT/OUTPUT EXAMPLE:
                 "enough,jokes", "Nothing to replace"
 """
 import re
-from typing import Tuple
+from typing import Sequence
 
 
-def left_join(phrases: Tuple[str, ...]) -> str:
+def left_join(phrases: Sequence[str]) -> str:
     return re.sub('right', 'left', ','.join(phrases))
 
 
