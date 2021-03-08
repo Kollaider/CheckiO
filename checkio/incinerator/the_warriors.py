@@ -1,4 +1,4 @@
-"""Unix Match. Part 1.
+"""The Warriors.
 
 URL: https://py.checkio.org/en/mission/the-warriors/
 DESCRIPTION:
