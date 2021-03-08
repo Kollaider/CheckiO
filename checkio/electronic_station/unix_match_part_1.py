@@ -26,7 +26,9 @@ def unix_match(filename: str, pattern: str) -> bool:
 
 
 def main():
-    print(unix_match('somefile.txt', '*'))
+    print(
+        f"unix_match('somefile.txt', '*') == "
+        f"{unix_match('somefile.txt', '*')}")
 
 
 if __name__ == '__main__':
